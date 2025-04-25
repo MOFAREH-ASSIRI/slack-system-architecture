@@ -23,7 +23,7 @@ jobs:
           ~/.d2/bin/d2 architecture.d2 architecture.png
 
       - name: Upload diagram as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: architecture-diagram
           path: architecture.png
