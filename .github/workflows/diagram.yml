@@ -1,0 +1,26 @@
+name: Generate D2 Architecture Diagram
+
+on:
+  push:
+    paths:
+      - 'architecture.d2'
+
+jobs:
+  render-diagram:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up D2
+        uses: terrastruct/d2-action@v1
+
+      - name: Render diagram
+        run: d2 architecture.d2 architecture.png
+
+      - name: Upload diagram as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: architecture-diagram
+          path: architecture.png
