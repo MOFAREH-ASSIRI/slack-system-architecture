@@ -1,0 +1,32 @@
+direction: right
+
+Frontend: "React Frontend"
+APIGateway: "API Gateway"
+Auth: "Auth Service"
+Users: "User Service"
+Channels: "Channel Service"
+Messages: "Message Service"
+Notifications: "Notification Service"
+Broker: "Message Broker"
+DBAuth: "DB (Auth)"
+DBUsers: "DB (Users)"
+DBChannels: "DB (Channels)"
+DBMessages: "DB (Messages)"
+Storage: "Object Storage"
+
+Frontend -> APIGateway
+APIGateway -> Auth
+APIGateway -> Users
+APIGateway -> Channels
+APIGateway -> Messages
+APIGateway -> Notifications
+
+Auth -> DBAuth
+Users -> DBUsers
+Channels -> DBChannels
+Messages -> DBMessages
+
+Messages -> Broker
+Broker -> Notifications
+
+Messages -> Storage
