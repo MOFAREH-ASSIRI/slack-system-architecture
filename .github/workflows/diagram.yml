@@ -13,11 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up D2
-        uses: terrastruct/d2-action@v1
+      - name: Install D2 CLI
+        run: |
+          curl -fsSL https://d2lang.com/install.sh | sh -s --
+          echo "$HOME/.d2/bin" >> $GITHUB_PATH
 
-      - name: Render diagram
-        run: d2 architecture.d2 architecture.png
+      - name: Render diagram to PNG
+        run: |
+          ~/.d2/bin/d2 architecture.d2 architecture.png
 
       - name: Upload diagram as artifact
         uses: actions/upload-artifact@v3
