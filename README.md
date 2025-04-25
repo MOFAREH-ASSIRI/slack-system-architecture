@@ -69,3 +69,19 @@ The system is a Slack-like messaging platform built using a microservices archit
 - Logs service activity and errors (ELK: Elasticsearch, Logstash, Kibana).
 - Monitors health, uptime, and metrics using Prometheus and Grafana.
 
+---
+
+## 🧠 Architecture Diagram
+
+This project includes a D2-based architecture diagram (`architecture.d2`) that visually represents the system design.
+
+The diagram is automatically generated as a PNG image using a GitHub Actions workflow located at `.github/workflows/diagram.yml`.
+
+Every time the architecture file is updated, the diagram is re-rendered and uploaded as an artifact.
+
+To view or download the latest diagram:
+- Go to the **Actions** tab
+- Select the latest workflow run
+- Download the artifact named **`architecture-diagram`**
+
+This setup demonstrates CI/CD usage in software documentation 🎯
