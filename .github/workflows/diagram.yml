@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        # Full SHA to avoid "missing download info" error
+        with:
+          fetch-depth: 1
 
       - name: Install D2 CLI
         run: |
@@ -23,7 +26,7 @@ jobs:
           ~/.d2/bin/d2 architecture.d2 architecture.png
 
       - name: Upload diagram as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: architecture-diagram
           path: architecture.png
