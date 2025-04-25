@@ -73,15 +73,8 @@ The system is a Slack-like messaging platform built using a microservices archit
 
 ## 🧠 Architecture Diagram
 
-This project includes a D2-based architecture diagram (`architecture.d2`) that visually represents the system design.
+This is the system architecture diagram generated using D2:
 
-The diagram is automatically generated as a PNG image using a GitHub Actions workflow located at `.github/workflows/diagram.yml`.
+![Architecture Diagram](d2.png)
 
-Every time the architecture file is updated, the diagram is re-rendered and uploaded as an artifact.
-
-To view or download the latest diagram:
-- Go to the **Actions** tab
-- Select the latest workflow run
-- Download the artifact named **`architecture-diagram`**
-
-This setup demonstrates CI/CD usage in software documentation 🎯
+The `architecture.d2` source file is included for editing or reuse.
